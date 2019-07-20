@@ -6,12 +6,15 @@ import VenueInfo from './components/venueInfo';
 import TopDeals from './components/TopDeals';
 import Categories from './components/categories';
 import Footer from './components/header-footer/Footer';
+import AboutUs from './components/AboutUs';
+import SearchByEmail from './components/SearchByEmail';
 import { Element } from 'react-scroll';
+
 
 class App extends Component {
   render(){
   return (
-    <div className="App" style={{height: "1500px"}}>
+    <div className="App">
 
     <Element name="Home">
     <Header/>
@@ -19,12 +22,15 @@ class App extends Component {
     
      <Featured/>
      <VenueInfo/>
-     <TopDeals/>
+     
 
      <Element name="Categories">
      <Categories/>
      </Element>
-
+     <AboutUs/>
+     <TopDeals/>
+     <SearchByEmail/>
+     <hr/>
      <Footer/>
     </div>
   );

@@ -1,59 +1,61 @@
 import React, { Component } from 'react';
 import MyButton from '../utills/MyButton';
 import Zoom from 'react-reveal/Zoom';
-
+import Flip from 'react-reveal/Flip';
+import '../../resources/bootstrap.min.css';
 class Categories extends Component {
-
-    state={
-        prices:[100,150,250],
-        positions :['Lawns','Banquets','Marquee'],
-        desc:['Lawns Detail','Banquets Details','Marquee Details'],
-        linkto:['http://sales/b','http://sales/m','http://sales/s'],
-        delay:[500,0,500]
-    }
-    showBoxes = () => (
-        this.state.prices.map((box,i)=>(
-            <Zoom delay={this.state.delay[i]} key={i}>
-            <div className="pricing_item">
-            <div className="pricing_inner_wrapper">
-                <div className="pricing_title">
-                    <span>${this.state.prices[i]}</span>
-                    <span>{this.state.positions[i]}</span>
-                </div>
-
-                <div className="pricing_description">
-                <span>${this.state.desc[i]}</span>
-                </div>
-
-                <div className="pricing_buttons">
-                    <MyButton 
-                        text="Booked"
-                        bck="#ffa800"
-                        color="ffffff"
-                        link={this.state.linkto[i]}
-
-                    />
-                </div>
-
-            </div>
-
-        </div>
-            </Zoom>
-           
-        ))
-
-    )
     render() {
         return (
-            <div className="bck_black">
-                <div className="center_wrapper pricing_section">
-                    <h2>Categories</h2>
-                    <div className="pricing_wrapper">
-                        {this.showBoxes()}
-                    </div>
+            
+            <div className="center_wrapper pricing_section">
+              <h2 style={{color:'black'}}>Categories</h2>
+            <hr style={{border:'solid'}}/>
+            <br/>
+            <div className="container mt-4">
+                <div className="row ">
+                    
+                <div className="cont col-4">
+                <Flip>
+                <img className="cat_img" src={require('../../resources/images/slide_two.jpg')} alt="Notebook" style={{width:'250px',height:'300px'}}/>
+                </Flip>
+                 <div className="content">
+                  <p style={{textAlign:'center'}}>Heading</p>
+                  {/*<p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>*/}
                 </div>
-                
+              </div>
+
+              <div className="cont col-4">
+
+              <Flip>
+              <img className="cat_img" src={require('../../resources/images/slide_two.jpg')} alt="Notebook" style={{width:'250px',height:'300px'}}/>
+              </Flip>
+
+                <div className="content">
+                  <p style={{textAlign:'center'}}>Heading</p>
+                  {/*<p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>*/}
+                </div>
+              </div>
+
+              <div className="cont col-4">
+
+               <Flip>
+              <img className="cat_img" src={require('../../resources/images/slide_two.jpg')} alt="Notebook" style={{width:'250px',height:'300px'}}/>
+              </Flip>
+              
+                <div className="content">
+                  <p style={{textAlign:'center'}}>Heading</p>
+                  {/*<p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>*/}
+                </div>
+              </div>
+
+              </div>
+
+                </div>
             </div>
+           
+          
+            
+            
         );
     }
 }

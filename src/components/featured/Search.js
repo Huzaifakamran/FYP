@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Slide from 'react-reveal/Slide';
-
+import '../../resources/bootstrap.min.css';
 class Search extends Component {
     state = {
 
@@ -10,31 +10,65 @@ class Search extends Component {
         return (
             <Slide left delay={1000}>
 
-                <div className="countdown_wrapper">
-                    <div className="countdown_bottom">
+                <div className="countdown_wrapper" style={{textAlign:'center',marginLeft:'15%',marginBottom:'1%'}}>
+                    <div className="countdown_bottom" >
                         <div className="countdown_item">
-                            <div className="countdown_time">23</div>
-                            <div className="countdown_tag">Days</div>
-                        </div>
+                         <div className="container">
+                            <div className="row">
+                                <div className="col-md-4">
+                                <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="Search by: Area, Venue Name" style={{
+                                    width:'250px',
+                                    borderTopColor:'#ffffff',
+                                    borderLeftColor:'#ffffff',
+                                    borderRightColor:'#ffffff'
+                                
+                                }} />
+                           
+                                </div>
 
-                        <div className="countdown_item">
-                            <div className="countdown_time">2</div>
-                            <div className="countdown_tag">Hrs</div>
-                        </div>
+                                <div className="col-md-4">
+                                <select className="form-control" id="exampleFormControlSelect1" style={{
+                                    width:'250px',
+                                    borderTopColor:'#ffffff',
+                                    borderLeftColor:'#ffffff',
+                                    borderRightColor:'#ffffff'
+                                
+                                }} >
+                                <option>Select Venue Type</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                </select>
+                                </div>
 
-                        <div className="countdown_item">
-                            <div className="countdown_time">20</div>
-                            <div className="countdown_tag">Mins</div>
-                        </div>
-
-                        <div className="countdown_item">
-                            <div className="countdown_time">2</div>
-                            <div className="countdown_tag">Sec</div>
-                        </div>
+                                <div className="col-md-4">
+                                <select className="form-control" id="exampleFormControlSelect1" style={{
+                                    width:'250px',
+                                    borderTopColor:'#ffffff',
+                                    borderLeftColor:'#ffffff',
+                                    borderRightColor:'#ffffff'
+                                }} >
+                                <option>Select Venue Location</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                </select>
+                                </div>
+                               
+                                    </div>
+                                    </div>
+    
+                         </div>
+                         <button type="button" className="btn btn-success">Search</button>
 
                     </div>
 
+                       
                 </div>
+
+                
 
             </Slide>
         );

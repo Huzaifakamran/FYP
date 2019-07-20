@@ -53,7 +53,24 @@ header .header_logo_venue {
 header .header_logo_title {
     text-transform: uppercase;
 }
-
+/*====================
+        SEARCHBYEMAIL
+======================*/
+.div6{
+    height: 150px;
+    margin-top: 10px;
+}
+.i1{
+    margin-left: 15%;  
+    margin-top:30px;
+    height: 50px;
+  }
+  .b1{
+    border: solid 2px black;
+    margin-bottom: 5px;
+    height: 50px;
+    background-color:rgb(70, 66, 66); 
+}
 /*====================
         FOOTER
 ======================*/
@@ -98,7 +115,7 @@ footer .footer_copyright {
 
 .artist_name .wrapper {
     border: 2px solid white;
-    height: 121px;
+    height: 145px;
     margin: 6px;
     text-align: center;
     color: #fff;
@@ -118,16 +135,17 @@ footer .footer_copyright {
 }
 
 .countdown_wrapper .countdown_top {
-    background: #ff4800;
+    background: #ffffff;
     font-size: 19px;
     padding: 10px;
     display: inline-block;
     text-transform: uppercase;
 }
 
+
 .countdown_wrapper .countdown_bottom {
     display: flex;
-    background: #d93d00;
+    background: #ffffff;
     padding: 10px 20px;
 }
 
@@ -215,9 +233,57 @@ footer .footer_copyright {
 }
 
 /*====================
-        HIGHLIGHTS
+        CATEGORIES
 ======================*/
 
+.cont {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+.cont .cat_img {
+    vertical-align: middle;
+}
+.cont .content {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 83%;
+    padding: 20px;
+  }
+  .cont:hover .content{
+    visibility: visible;
+
+  }
+  .content{
+    visibility:hidden;
+
+  }
+
+  /*====================
+        ABOUT US
+======================*/
+
+  .cont .content_cat {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+  }
+  .cont:hover .content_cat{
+    visibility: visible;
+
+  }
+  .content_cat{
+    visibility:hidden;
+
+  }
 
 .highlight_wrapper h2 {
     text-align: center;

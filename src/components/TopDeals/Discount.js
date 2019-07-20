@@ -2,50 +2,107 @@ import React, { Component } from 'react';
 import Fade from 'react-reveal/Fade';
 import Slide from 'react-reveal/Slide';
 import MyButton from '../utills/MyButton';
+import '../../resources/bootstrap.min.css';
+import Flip from 'react-reveal/Flip';
 
 class Discount extends Component {
-    state={
-        discountStart:0,
-        discountEnd:30
-    }
-    porcentage = () => {
-        if(this.state.discountStart < this.state.discountEnd){
-            this.setState({
-                discountStart: this.state.discountStart + 1 
-            })
-        }
-    }
-
-    componentDidUpdate(){
-        setTimeout(()=>{
-            this.porcentage()
-        },30)
-    }
-
     render() {
         return (
             <div className="center_wrapper">
-                <div className="discount_wrapper">
-                    <Fade onReveal={()=> this.porcentage()}>
-                        <div className="discount_porcentage">
-                            <span>{this.state.discountStart}%</span>
-                            <span>OFF</span>
+                <div className="container">
+                    <div className="row">
+                    <div className="col-md-5" style={{width: '540px'}}>
+                    <div className="row no-gutters">
+                      <div className="col-md-7" >
+                      <Flip>
+                      
+                        <img style={{height:'100%',width:'100%'}} src={require('../../resources/images/slide_two.jpg')} className="card-img" alt="..."/>
+                        </Flip>
                         </div>
-                    </Fade>
-                   
-                <Slide right>
-                    <div className="discount_description">
-                        <h3>Booked before 30 July</h3>
-                        <p>description of the hall, lawn, banquet, marquee</p>
-                       <MyButton
-                        text="Purchase tickets"
-                        bck="#ffa800"
-                        color="#ffffff" 
-                        link="https://www.google.com" />
+                      <div className="col-md-5">
+                        <div className="card-body" style={{textAlign:'center'}}>
+                          <h5 className="card-title">ABC Lawn</h5>
+                          <h5 className="card-title">50% OFF</h5>
+                          <p className="card-text">Minimum Dining For 500 persons</p>
+                          <p className="card-text"><small className="text-muted">Near Gulshan 13D, Karachi</small></p>
+                        </div>
+                      </div>
                     </div>
-                </Slide>
+                  </div>
 
+                  <div className="col-md-5 " style={{width: '540px',marginLeft:'120px'}}>
+                    <div className="row no-gutters">
+                      <div className="col-md-7" >
+                      <Flip>
+                      
+                      <img style={{height:'100%',width:'100%'}} src={require('../../resources/images/slide_two.jpg')} className="card-img" alt="..."/>
+                      </Flip>
+                       </div>
+                      <div className="col-md-5">
+                        <div className="card-body" style={{textAlign:'center'}}>
+                          <h5 className="card-title">ABC Lawn</h5>
+                          <h5 className="card-title">50% OFF</h5>
+                          <p className="card-text">Minimum Dining For 500 persons</p>
+                          <p className="card-text"><small className="text-muted">Near Gulshan 13D, Karachi</small></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                    </div>
                 </div>
+
+                <div className="container my-4">
+                    <div className="row">
+                    <div className="col-md-5" style={{width: '540px'}}>
+                    <div className="row no-gutters">
+                      <div className="col-md-7" >
+                      <Flip>
+                      
+                      <img style={{height:'100%',width:'100%'}} src={require('../../resources/images/slide_two.jpg')} className="card-img" alt="..."/>
+                      </Flip>
+                         </div>
+                      <div className="col-md-5">
+                        <div className="card-body" style={{textAlign:'center'}}>
+                          <h5 className="card-title">ABC Lawn</h5>
+                          <h5 className="card-title">50% OFF</h5>
+                          <p className="card-text">Minimum Dining For 500 persons</p>
+                          <p className="card-text"><small className="text-muted">Near Gulshan 13D, Karachi</small></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-md-5" style={{width: '540px',marginLeft:'120px'}}>
+                  <div className="row no-gutters">
+                    <div className="col-md-7" >
+                    <Flip>
+                      
+                    <img style={{height:'100%',width:'100%'}} src={require('../../resources/images/slide_two.jpg')} className="card-img" alt="..."/>
+                    </Flip>
+                      </div>
+                    <div className="col-md-5">
+                      <div className="card-body" style={{textAlign:'center'}}>
+                        <h5 className="card-title">ABC Lawn</h5>
+                        <h5 className="card-title">50% OFF</h5>
+                        <p className="card-text">Minimum Dining For 500 persons</p>
+                        <p className="card-text"><small className="text-muted">Near Gulshan 13D, Karachi</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                    </div>
+                </div>
+
+
+           
+
+            
+
+          
+
+         
                 
             </div>
         );
