@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import Slide from 'react-reveal/Slide';
 import '../../resources/bootstrap.min.css';
-class Search extends Component {
-    state = {
 
-    }
+
+class Search extends Component {
 
     render() {
         return (
@@ -34,7 +33,7 @@ class Search extends Component {
                                     borderRightColor:'#ffffff'
                                 
                                 }} >
-                                <option>Select Venue Type</option>
+                                <option selected>Select Venue Type</option>
                                 <option>2</option>
                                 <option>3</option>
                                 <option>4</option>
@@ -49,7 +48,7 @@ class Search extends Component {
                                     borderLeftColor:'#ffffff',
                                     borderRightColor:'#ffffff'
                                 }} >
-                                <option>Select Venue Location</option>
+                                <option selected>Select Venue Location</option>
                                 <option>2</option>
                                 <option>3</option>
                                 <option>4</option>
@@ -61,7 +60,7 @@ class Search extends Component {
                                     </div>
     
                          </div>
-                         <button type="button" className="btn btn-success">Search</button>
+                       <button type="button" className="btn btn-success" >Search</button>
 
                     </div>
 

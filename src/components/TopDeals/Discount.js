@@ -94,18 +94,10 @@ class Discount extends Component {
 
                     </div>
                 </div>
-
-
-           
-
-            
-
-          
-
-         
-                
             </div>
+            
         );
+        
     }
 }
 

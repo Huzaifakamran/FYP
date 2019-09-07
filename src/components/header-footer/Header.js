@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import MyButton from '../utills/MyButton';
-import SideDrawer from './SideDrawer';
 import '../../resources/bootstrap.min.css';
 import Login from './LoginSignUp';
+import { Link } from 'react-router-dom';
+import { scroller } from 'react-scroll';
 
 class Header extends Component {
 
@@ -12,7 +13,14 @@ class Header extends Component {
         drawerOpen: false,
         headerShow: false
     }
-
+    scrollToElement = (element) => {
+        scroller.scrollTo(element,{
+            duration: 1500,
+            delay: 100,
+            smooth: true,
+            offset: -150
+        })
+    }
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
     }
@@ -51,20 +59,15 @@ class Header extends Component {
                         <div className="header_logo_title">Design Your Perfect Event</div>
                     </div>
 
-                    {/* <IconButton aria-label="Menu" color="inherit" onClick={()=> this.toggleDrawer(true)}>
-                        <MenuIcon/>
-        </IconButton>
-
-                    <SideDrawer open={this.state.drawerOpen} onClose={(value)=> this.toggleDrawer(value)} />
-                    */}
-
-                    <button style={{ background: 'none', border: 'none', color: '#ffffff', margin: '10px' }}>HOME</button>
-                    <button style={{ background: 'none', border: 'none', color: '#ffffff', margin: '10px' }}>CATEGORIES</button>
-                    <button style={{ background: 'none', border: 'none', color: '#ffffff', margin: '10px' }}>ABOUT US</button>
-
-                   
-                    <button style={{ background: 'none', border: 'none', color: '#ffffff', margin: '10px' }} data-toggle="modal" data-target="#exampleModalCenter">LOGIN</button>
-                     <Login/>
+                    <button style={{ background: 'none', border: 'none', color: '#ffffff', margin: '10px' }} onClick={()=>this.scrollToElement('Home')}>HOME</button>
+                    <button style={{ background: 'none', border: 'none', color: '#ffffff', margin: '10px' }} onClick={()=>this.scrollToElement('Categories')}>CATEGORIES</button>
+                    <button style={{ background: 'none', border: 'none', color: '#ffffff', margin: '10px' }} onClick={()=>this.scrollToElement('AboutUs')}>ABOUT US</button>
+                    <Link to='/PrivacyPolicy'>   <button style={{ background: 'none', border: 'none', color: '#ffffff', margin: '10px' }}>PRIVACY POLICY</button></Link>
+                    <button style={{ background: 'none', border: 'none', color: '#ffffff', margin: '10px' }} data-toggle="modal" data-target="#exampleModalCenter">LOGIN / SIGNUP</button>
+                   <Link to="/OwnerDashboard"> <button style={{ background: 'none', border: 'none', color: '#ffffff', margin: '10px' }}>Owner</button></Link>
+                   <Link to="/AdminDashboard"><button style={{ background: 'none', border: 'none', color: '#ffffff', margin: '10px' }} data-toggle="modal" data-target="#exampleModalCenter">Admin</button></Link>
+                
+                    <Login/>
                     
 
                 </Toolbar>

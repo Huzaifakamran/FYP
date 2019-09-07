@@ -4,6 +4,7 @@ import 'bootstrap';
 import { FacebookLoginButton, GoogleLoginButton } from "react-social-login-buttons";
 import $ from 'jquery';
 import firebase from '../../config/firebase';
+import Image from 'react-bootstrap/Image';
 class LoginSignUp extends Component {
     
     constructor(){
@@ -157,6 +158,7 @@ class LoginSignUp extends Component {
                     <br />
 
                     <p style={{ color: 'black' }}>OR</p>
+            
 
                     <div className="form-group">
                         <input type="name" className="form-control" id="f_name" aria-describedby="emailHelp" placeholder="First name" />
@@ -181,6 +183,13 @@ class LoginSignUp extends Component {
                     <div className="form-group">
                         <input type="password" className="form-control" id="confirm_pwd" placeholder="Confirm Password" />
                     </div>
+
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    <option selected>Select Account Type...</option>
+                    <option value="1">User</option>
+                    <option value="2">Hall Owner</option>
+                   
+                  </select>
 
                 </div>
 
