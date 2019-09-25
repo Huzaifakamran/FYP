@@ -2,11 +2,13 @@ import React from 'react';
 import iconCalendar from '../../resources/images/icons/calendar.png';
 import iconLocation from '../../resources/images/icons/location.png';
 import Zoom from 'react-reveal/Zoom';
+import '../../resources/bootstrap.min.css';
+
 const VenueInfo = () => {
     return (
         <div className="bck_black">
         
-            <div className="center_wrapper">
+            <div style={{textAlign:'center'}}>
                 <div className="vn_wrapper">
                 <Zoom duration={500}>
                

@@ -6,7 +6,8 @@ import ListSubheader from '@material-ui/core/ListSubheader';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import SettingIcon from '@material-ui/icons/Settings';
 import FeedbackIcon from '@material-ui/icons/Feedback';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import BookingIcon from '@material-ui/icons/AssignmentTurnedIn';
+import Logout from '@material-ui/icons/Feedback';
 
 import { Link } from 'react-router-dom';
 
@@ -24,7 +25,7 @@ export const mainListItems = (
 
       <ListItem button>
         <ListItemIcon>
-          <ShoppingCartIcon />
+          <BookingIcon />
         </ListItemIcon>
         <ListItemText primary="Bookings" />
       </ListItem>
@@ -35,17 +36,18 @@ export const mainListItems = (
         </ListItemIcon>
         <ListItemText primary="Messages" />
       </ListItem>
-
+    <Link to="/Setting">
       <ListItem button>
         <ListItemIcon>
           <SettingIcon />
         </ListItemIcon>
         <ListItemText primary="Setting" />
       </ListItem>
+      </Link>
 
       <ListItem button>
         <ListItemIcon>
-          <FeedbackIcon />
+          <Logout />
         </ListItemIcon>
         <ListItemText primary="Logout" />
       </ListItem>
@@ -70,5 +72,21 @@ export const secondaryListItems=(
         </ListItemIcon>
         <ListItemText primary="Feedback" />
       </ListItem>
+  <Link to="/OwnerDashboard/Card">
+      <ListItem button>
+        <ListItemIcon>
+          <FeedbackIcon />
+        </ListItemIcon>
+        <ListItemText primary="Card" />
+      </ListItem>
+      </Link>
+  <Link to="/HallDetails">
+      <ListItem button>
+        <ListItemIcon>
+          <FeedbackIcon />
+        </ListItemIcon>
+        <ListItemText primary="Hall Details" />
+      </ListItem>
+      </Link>
   </div>
 );

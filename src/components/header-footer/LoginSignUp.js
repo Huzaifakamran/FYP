@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import '../../resources/bootstrap.min.css';
-import 'bootstrap';
+// import 'bootstrap';
 import { FacebookLoginButton, GoogleLoginButton } from "react-social-login-buttons";
 import $ from 'jquery';
 import firebase from '../../config/firebase';
-import Image from 'react-bootstrap/Image';
+// import Image from 'react-bootstrap/Image';
 class LoginSignUp extends Component {
     
     constructor(){

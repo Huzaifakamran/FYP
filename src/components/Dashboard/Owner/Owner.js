@@ -1,6 +1,5 @@
 import React from 'react';
 import clsx from 'clsx';
-
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
@@ -10,19 +9,19 @@ import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
-import Badge from '@material-ui/core/Badge';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import MenuIcon from '@material-ui/icons/Menu';
 import RegisterIcon from '@material-ui/icons/AddCircle'
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import Message from '@material-ui/icons/Message';
 import UserIcon from '@material-ui/icons/AccountCircle';
-import MessageIcon from '@material-ui/icons/Message';
+import DotsIcon from '@material-ui/icons/MoreVert';
 import { mainListItems , secondaryListItems } from './listItems';
 import { Link } from 'react-router-dom';
 import Deposits from './Deposits';
 import Orders from './Orders';
+import { Button } from '@material-ui/core';
 
 const drawerWidth = 240;
 
@@ -110,10 +109,12 @@ export default function Dashboard() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const handleDrawerOpen = () => {
+    document.getElementById("dot_icon").style.display = "inline-block";
     setOpen(true);
   };
   const handleDrawerClose = () => {
-    setOpen(false);
+    document.getElementById("dot_icon").style.display = "none";
+     setOpen(false);
   };
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
@@ -133,12 +134,23 @@ export default function Dashboard() {
             <MenuIcon />
           </IconButton>
          
+         
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
+         
+         <Link> <DotsIcon id="dot_icon" onClick={handleDrawerClose} style={{color:'white'}}/></Link>
+          &nbsp;
            Owner Dashboard
           </Typography>
-
+          <Button style={{color:'white'}}>Browse Venue</Button>
+          <Button style={{color:'white'}}>Manage Venues</Button>
+          <Button style={{color:'white'}}>Logout</Button>
          
-        <Link to="/RegisterHall">  <IconButton style={{color:'#ffffff'}} title="Register Hall">
+          <IconButton style={{color:'#ffffff'}} title="Message">
+          <Message/>
+          </IconButton>
+
+        <Link to="/RegisterHall"> 
+         <IconButton style={{color:'#ffffff'}} title="Register Hall">
           <RegisterIcon/>
           </IconButton>
           </Link>
@@ -152,46 +164,29 @@ export default function Dashboard() {
         </Toolbar>
       </AppBar>
      
-      <Drawer 
+      <Drawer
         variant="permanent"
         classes={{
           paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose),
         }}
         open={open}
       >
-        <div className={classes.toolbarIcon}>
-          <IconButton onClick={handleDrawerClose}> 
-          <div style={{marginRight:'20px'}}>
-         <h4 className="font_righteous header_logo_venue"> Venue Club</h4>
-         <p style={{fontSize:'12px'}}>Design Your Perfect Event</p>
-          </div>
-         
-
-         
-          
-         <ChevronLeftIcon />   
-          </IconButton>
-        </div>
-
-        <br/>
-
-        <Divider />
-
-       <div className="my-5">
+       <Divider/>
+       <div>
+       <img style={{width:'60px', height:'60px'}} src={require('../../../resources/images/final.png')} />
+        <h3 className="ml-5 font_righteous" style={{marginTop:'-30px'}}>Venue Club</h3></div>
+       <Divider className="mt-2"/>
+       <div className="my-3">
        <List >{mainListItems}</List>
        </div>
 
        <Divider />
 
        
-       <div className="my-5">
+       <div className="my-4">
        <List >{secondaryListItems}</List>
        </div>
 
-       
-       
-       
-       
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />

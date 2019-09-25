@@ -3,14 +3,24 @@ import { Link } from 'react-router-dom';
 import Header from '../header-footer/FixedHeader';
 import Footer from '../header-footer/Footer';
 import SearchByEmail from '../SearchByEmail/index';
+import $ from 'jquery';
+import '../../resources/bootstrap.min.css';
+
+
 class Privacy extends Component {
+
+
+    componentDidMount(){ 
+     $('html,body').scrollTop(0); 
+    }
     render() {
+         
         return (
-           <div>
-           <Header/>
-                <div style={{textAlign:'center'}}>
+           <div id="privacy_policy">
+           <Header/> 
+                <div style={{textAlign:'center',marginTop:'100px'}}>
                 <br/>
-                    <h1>Privacy Policy</h1>
+                    <h1 className="font_righteous">Privacy Policy</h1>
                 </div>
                 <br/>
                 <div style={{marginLeft:"200px",marginRight:"200px"}}>

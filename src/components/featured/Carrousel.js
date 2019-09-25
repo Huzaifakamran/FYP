@@ -3,10 +3,10 @@ import Slider from "react-slick";
 import slider1 from '../../resources/images/slide_one.jpg';
 import slider2 from '../../resources/images/slide_two.jpg';
 import slider3 from '../../resources/images/slide_three.jpg';
+import '../../resources/bootstrap.min.css';
 
 const Carrousel = () => {
     const settings = {
-        dots: true,
         infinite: true,
         autoplay:true,
         speed: 500

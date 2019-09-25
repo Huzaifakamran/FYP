@@ -10,7 +10,7 @@ import AboutUs from './components/AboutUs';
 import SearchByEmail from './components/SearchByEmail';
 import {Link} from 'react-router-dom';
 import { Element } from 'react-scroll';
-
+import './resources/bootstrap.min.css';
 
 class Home extends Component {
   render(){
@@ -24,19 +24,22 @@ class Home extends Component {
     </Element>
     
      <Featured/>
-     <VenueInfo/>
      
-
      <Element name="Categories">
      <Categories/>
      </Element>
-     
+
      <Element name="AboutUs">
      <AboutUs/>
      </Element>
+
+     
+     
+     
      
      <TopDeals/>
-     <hr/>
+     {/* <VenueInfo/> */}
+     
      <SearchByEmail/>
      <Footer/>
     </div>

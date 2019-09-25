@@ -1,6 +1,7 @@
 import React from 'react';
 import Carrousel from './Carrousel';
 import Search from './Search';
+import '../../resources/bootstrap.min.css';
 
 const Featured = () => {
     return (

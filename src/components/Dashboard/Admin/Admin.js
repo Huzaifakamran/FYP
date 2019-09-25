@@ -196,7 +196,7 @@ export default function Dashboard() {
               <Paper className={fixedHeightPaper}>
 
                 <div style={{textAlign:'center',marginTop:'80px'}}>
-
+            <p>Hello</p>
 
                  </div>
                  

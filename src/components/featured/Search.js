@@ -9,7 +9,7 @@ class Search extends Component {
         return (
             <Slide left delay={1000}>
 
-                <div className="countdown_wrapper" style={{textAlign:'center',marginLeft:'15%',marginBottom:'1%'}}>
+                <div className="countdown_wrapper" style={{textAlign:'center',margin:'2px 15%',marginBottom:'1%'}}>
                     <div className="countdown_bottom" >
                         <div className="countdown_item">
                          <div className="container">

@@ -1,35 +1,34 @@
 import React, { Component } from 'react';
 import '../../resources/bootstrap.min.css';
-import { Link } from 'react-router-dom';
 import Header from '../header-footer/FixedHeader';
 import Footer from '../header-footer/Footer';
 class Register extends Component {
   render() {
     return (
-      <div>
+      <div style={{textAlign:'center'}}>
         <Header />
 
-        <div className="center_wrapper" style={{ marginTop: '50px', marginBottom: '50px' }}>
-            <h2 style={{textAlign:'center'}}>REGISTRATION FORM</h2>
+        <div style={{ marginTop:'140px', marginBottom:'50px',textAlign:'center',marginLeft:'160px',marginRight:'160px'}}>
+            <h2>REGISTRATION FORM</h2>
 
-          <div className="form-group">
-            <label for="inputName">Hall name</label>
-            <input type="text" className="form-control" id="inputName" placeholder="ABC Lawn" />
+          <div className="form-group mt-4" >
+            <label for="inputName" style={{float:'left'}}>Hall name</label>
+            <input type="text" className="form-control" id="inputName" placeholder="ABC Lawn"/>
           </div>
 
           <div className="form-group">
-            <label for="inputAddress">Address</label>
+            <label for="inputAddress" style={{float:'left'}}>Address</label>
             <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St" />
           </div>
 
           <div className="form-row">
             <div className="col">
-              <label for="inputCapacity">Capacity</label>
+              <label for="inputCapacity" style={{float:'left'}}>Capacity</label>
               <input type="number" className="form-control" placeholder="500" />
             </div>
 
             <div className="col">
-              <label for="inputPrice">Price</label>
+              <label for="inputPrice" style={{float:'left'}}>Price</label>
               <input type="number" className="form-control" placeholder="Rs." />
             </div>
           </div>
@@ -37,7 +36,7 @@ class Register extends Component {
           <br />
 
           <div className="form-group">
-            <label for="exampleFormControlFile1">Upload hall images</label>
+            <label for="exampleFormControlFile1" style={{float:'left'}}>Upload hall images</label>
             <input type="file" multiple className="form-control-file" id="exampleFormControlFile1" />
           </div>
 
